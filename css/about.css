@@ -1,0 +1,256 @@
+.about__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 48px 80px;
+}
+.about__block {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  height: 100%;
+} 
+
+.about__block_hover {
+  cursor: pointer;
+}
+
+.about__info {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+} 
+.about__text {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400;
+}
+.about__text:not(:last-child) {
+  margin-bottom: 39px;
+}
+
+.about__blockquote {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+ 
+}
+
+.about__quote {
+  position: relative;
+  max-width: 400px;
+  quotes: none;
+  padding-left: 30px;
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 114%;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  
+}
+.about__quote:before {
+  content:'“';
+  font-weight: 900;
+  color: var(--purple);
+}
+.about__quote:after {
+  content:'”';
+  font-weight: 900;
+  color: var(--purple);
+}
+
+.creator {
+  float: right;
+  right: 100px;
+  bottom: 0;
+  align-items: center;
+}
+
+.creator__photo {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 30px;
+  object-fit: cover;
+  object-position: top;
+  cursor: pointer; 
+}
+
+.creator__cite {
+  max-width: 280px;
+  min-height: 84px;
+  padding-right: 30px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  display: inline-block;
+}
+@media (max-width: 1024px) {
+  .about__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 48px 60px;
+  }
+  .about__text {
+    font-size: 18px;
+    line-height: 24px;
+    
+  }
+  .about__quote {
+    /* padding-left: 20px; */
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 120%;
+    margin-bottom: 0;
+    
+  }
+  .creator {
+    bottom: 0;
+    align-items: center;
+  }
+  .creator__photo {
+    /* display: inline-block; */
+    max-width: 70px;
+    height: 70px;
+    margin-right: 25px;
+    object-fit: cover;
+    object-position: top;
+    cursor: pointer; 
+  }
+
+  .creator__cite {
+    max-width: 209px;
+    min-height: 78px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  
+}
+@media (max-width: 904px) {
+  .about__block {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    height: 100%;
+  } 
+
+  .about__blockquote {
+    grid-column: 1 / 3;
+  }
+  .about__wrapper {
+    gap: 25px;
+  }
+  
+  .about__quote {
+    margin-bottom: 22px;
+    max-width: 600px;;
+    max-height: 90px;
+    font-size: 32px;
+    line-height: 112%;
+
+  }
+ .about__block {
+    max-width: 400px;
+    height: 382px;
+    object-fit: cover;
+  }
+   .about__block img{ 
+    object-fit: cover;
+    height: 100%;
+    width: 100%; 
+  }
+    .about__info {
+    font-size: 16px;
+    line-height: 16px;  
+  } 
+    .about__text:first-child {
+    padding-top: 60px;
+   
+  } 
+
+  .about__text:nth-child(2) {
+    padding-bottom: 30px;
+   
+  } 
+   .about__text {
+    max-width: 350px;
+    
+  }
+
+}
+@media (max-width: 514px) {
+  .about__wrapper {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+ 
+  .about__block {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    max-width: 280px;
+    height: 260px;
+  }
+  .about__info {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  .about__blockquote {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+  
+  .about__block img,
+  .about__text,
+  .about__blockquote {
+    width: 100%;
+  }
+  .about__title {
+    margin-bottom: 30px;
+  }
+  .about__text {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  
+  .about__text:first-child {
+    padding-top: 0;
+    margin-bottom: 17px;
+  }
+   .about__quote {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 144%;
+   }
+   .creator {
+    /* display: flex; */
+    /* justify-content: space-between;
+    align-items: center; */
+    /* max-height: 68px; */
+   }
+   .creator__photo {
+    max-width: 60px;
+    height: 60px;
+    object-fit: cover;
+    object-position: top;
+    cursor: pointer;
+    margin-right: 20px; 
+  }
+   .creator__cite {
+    font-size: 12px;
+    line-height: 133%;
+    max-width: 174px;
+    padding-right: 0;
+   }
+ 
+}
+
+
+  
+
+
+
+
+
+  
+
+
+

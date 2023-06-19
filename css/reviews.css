@@ -1,0 +1,167 @@
+.review:not(:last-child) {
+  display: block;
+  margin-bottom: 50px;
+}
+.review__wrapper {
+  position: relative;
+  min-height: 350px;
+  padding: 0 100px;
+}
+.review__person {
+  position: relative;
+  max-width: 280px;
+  min-height: 300px;
+  margin-right: 20px;
+  float: left;
+  
+}
+.review__img {
+  position: absolute;
+  display: block;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+}
+.review__img-1 {
+  background-image: radial-gradient(rgba(196, 196, 196, 0) 0%, rgba(108, 2, 135, 0.5) 100%);
+}
+.review__img-2 {
+  background-image: radial-gradient(rgba(196, 196, 196, 0)  0%, rgba(108, 2, 135, 0.5)  100%);
+}
+.review__img-3 {
+  background-image: radial-gradient(rgba(196, 196, 196, 0)  0%, rgba(108, 2, 135, 0.5)  100%)
+
+}
+.review__photo {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 0 0;
+  margin-bottom: 11px;
+  cursor: pointer;
+   
+}
+
+.review__sign {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+}
+.review__text {
+  vertical-align: top;
+  padding-top: 100px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--white);
+}
+@media (max-width: 1040px) {
+    .review:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .review__wrapper {
+    position: relative;
+    min-height: 270px;
+    padding: 0;
+  }
+    .review__img {
+    position: absolute;
+    display: block;
+    width: 172px;
+    height: 172px;
+    border-radius: 50%;
+  }
+    .review__photo {
+    width: 172px;
+    height: 172px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 0 0;
+    margin-bottom: 21px;
+    cursor: pointer; 
+  }
+  .review__sign {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+  }
+  .review__text {
+    padding-top: 30px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 144%;
+    max-width: 700px;
+    color: var(--white);
+  }
+}
+@media (max-width: 904px) {
+    .review__img {
+      width: 153px;
+      height: 153px;
+  }
+    .review__photo {
+      width: 153px;
+      height: 153px;
+      margin-bottom: 17px;
+     
+  }
+
+  .review__sign {
+    font-size: 14px;
+    line-height: 20px;
+   
+  }
+  .review__text {
+    padding-top: 30px;
+    font-size: 16px;
+    line-height: 22px;
+    max-width: 550px;
+  }
+}
+@media (max-width: 450px) {
+    .review__wrapper {
+      position: relative;
+      min-height: 150px;
+      padding: 0;
+      margin: 0 auto;
+}
+    .review__person {
+      width: 100%;
+      min-height: 100px;
+      margin-right: 0;
+      text-align: center;
+      margin-bottom: 20px;
+  
+  }
+    .clearfix { 
+      clear: both;
+     }
+    .review__img {
+      width: 86px;
+      height: 86px;
+      left: 50%;
+      transform:translate(-50%)
+  }
+    .review__photo {
+      width: 86px;
+      height: 86px;
+      margin-bottom: 15px;  
+  }
+   .review__sign {
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center; 
+  }
+
+  .review__text {
+    display: block;
+    padding: 0;
+    font-size: 12px;
+    line-height: 133%;
+    min-width: 100%;
+    margin: 0 auto;
+  }
+}

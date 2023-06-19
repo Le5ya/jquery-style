@@ -1,0 +1,111 @@
+.modal-order {
+  display: none;
+}
+@media (max-width: 904px ) {
+  .modal-order {
+    position: absolute;
+    width: 100%;
+    /* height: 5639px; */
+    left: 0;
+    top: 107px;
+    background: rgba(27, 26, 27, 0.7);
+    z-index: 999;
+  }
+  .modal-order__wrapper {
+    position: absolute;
+    max-width: 600px;
+    height: 498px;
+    padding-top: 60px;
+    padding-bottom: 80px;
+    left:50%;
+    transform:translate(-50%);
+    top: 72px;
+    background: #440F51;
+  }
+  .modal-order__close {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background: transparent;
+    background-image: url('../img/modal-close.svg');
+  }
+  .modal-order__title {
+    font-size: 22px;
+    line-height: 30px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    
+    color: #FFFFFF;
+  }
+  .modal-order__form {
+    margin: 0 auto;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .modal-order__label {
+    max-width: 280px;
+    height: 74px;
+
+  }
+
+  .modal-order__submit {
+    max-width: 300px;
+    height: 60px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--white);
+  }
+}
+@media (max-width: 350px ) {
+  .modal-order {
+    top: 0;
+    height: 100%;
+  }
+  .modal-order__wrapper {
+    width: 87%;;
+    height: 495px;
+    padding-top: 60px;
+    padding-bottom: 88px;
+    /* left:50%;
+    transform:translate(-50%); */
+    top: 20px;
+  }
+  .modal-order__close {
+    width: 30px;
+    height: 30px;
+    right: 10px;
+    top: 10px;
+    background-image: url('../img/modal-close1.svg');
+  }
+  .modal-order__title {
+    font-size: 20px;
+  }
+  .modal-order__form {
+    margin: 0 auto;
+    max-width: 245px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+  .modal-order__label {
+    max-width: 220px;
+    height: 64px;
+
+  }
+
+  .modal-order__submit {
+    width: 243px;
+    height: 52px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--white);
+  }
+}

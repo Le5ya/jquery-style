@@ -1,0 +1,183 @@
+.questions {
+  min-width: 100%;
+}
+
+.questions__item {
+  background-color: var(--white);
+  color: var(--red-gray);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 46px;
+  padding: 30px 70px;
+  margin-bottom: 20px;
+}
+
+.questions__item_color_purple {
+  background-color: var(--dark-purple);
+  color: var(--white);
+}
+
+.questions__item:after {
+  content: "";
+  display: block;
+  float: right;
+  width: 46px;
+  height: 46px;
+  background-image: url("../img/open-purple.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  
+}
+.questions__item_color_purple:after {
+  content: "";
+  display: block;
+  float: right;
+  width: 46px;
+  height: 46px;
+  background-image: url("../img/open.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.questions__item:hover:after {
+  transition-duration: 0.5s;
+  background-image: url("../img/open-purple_h.svg");
+}
+.questions__item:active:after {
+  transition-duration: 0.5s;
+  background-image: url("../img/close-purple.svg");
+}
+.questions__item_color_purple:hover:after {
+  transition-duration: 0.5s;
+  background-image: url("../img/open-hover.svg");
+}
+.questions__item_color_purple:active:after {
+  transition-duration: 0.5s;
+  background-image: url("../img/close.svg");
+}
+
+/*.questions__item {
+  background-color: var(--white);
+  color: var(--red-gray);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 30px 70px;
+  margin-bottom: 16px;
+}*/
+
+/*.questions__item_color_purple {
+  background-color: var(--dark-purple);
+  color: var(--white);
+}*/
+
+/*.questions__item:after {
+  content: "";
+  display: block;
+  float: right;
+  width: 46px;
+  height: 46px;
+  background-image: url("../img/open-purple.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  
+}*/
+/*.questions__item_color_purple:after {
+   content: "";
+  display: block;
+  float: right;
+  width: 46px;
+  height: 46px;
+  background-image: url("../img/open.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}*/
+
+@media (max-width: 905px) {
+
+  .questions__item {
+    position: relative;
+    background-color: var(--white);
+    color: var(--red-gray);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 30px 70px;
+    margin-bottom: 10px;
+  }
+
+  .questions__item_color_purple {
+    background-color: var(--dark-purple);
+    color: var(--white);
+  }
+
+  .questions__item:after {
+    position: absolute;
+    content: "";
+    display: block;
+    right: 70px;
+    bottom: 25%;
+    float: right;
+    width: 46px;
+    height: 46px;
+    background-image: url("../img/open-purple.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    
+    }
+    .questions__item_color_purple:after {
+      content: "";
+      display: block;
+      float: right;
+      width: 46px;
+      height: 46px;
+      background-image: url("../img/open.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
+}
+@media (max-width: 500px) {
+  .questions__item {
+    font-size: 12px;
+    line-height: 16px;
+    padding: 15px 11px;
+    max-width: 280px;
+    margin-bottom: 10px;
+  }
+  .questions__item_color_purple {
+    background-color: var(--white);
+    color: var(--red-gray);
+  }
+  .questions__item:after {
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    }
+    .questions__item_color_purple:after {
+      background-image: url("../img/open-purple.svg");
+    }
+    .questions__item:hover:after,
+    .questions__item_color_purple:hover:after {
+  transition-duration: 0.5s;
+  background-image: url("../img/open-purple_h.svg");
+}
+.questions__item:active:after,
+.questions__item_color_purple:active:after {
+  transition-duration: 0.5s;
+  background-image: url("../img/close-purple.svg");
+}
+/*.questions__item_color_purple:hover:after {
+  transition-duration: 0.5s;
+  background-image: url("../img/open-hover.svg");
+}*/
+/*.questions__item_color_purple:active:after {
+  transition-duration: 0.5s;
+  background-image: url("../img/close.svg");
+}*/
+} 
+

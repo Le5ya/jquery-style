@@ -1,0 +1,18 @@
+:root {
+  --white:#fff;
+  --light-purple: #CD06FF;
+  --purple: #6C0287;
+  --midi-purple: #640AA3;
+  --link-hover:  #cc99d8;
+  --link-focus: #6163eb;
+  --link-active: #026387;
+  --but-light: #840AA3;
+  --but-dark: #640AA3;
+  --dark-purple:#440F51;
+  --black:  #000;
+  --gray: #eadeed;
+  --red-gray: #1C1A1A;
+  --grad-one: #1b1a1b;
+  --grad-twq:#370A37;
+  --body: #1b1b1b; 
+}

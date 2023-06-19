@@ -1,0 +1,237 @@
+
+.page__section {
+  padding: 50px 0;
+}
+.page__section:first-child {
+  padding-top: 0;
+}
+
+.back {
+	position: relative;
+	display: block;
+	padding-left: 36px;
+} 
+
+.back:before {
+	position: absolute;
+  content: '';
+  background-image: url('../img/back.svg');
+  background-repeat: no-repeat;
+  left: 0;
+  top: 25%;
+  width: 31px;
+  height: 16px;
+	color: var(--white);
+}
+.bunner {
+	/* padding-top: 0; */
+  height: 750px;
+	position: relative;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position-x: center;
+	background-position-y: 20px;
+  margin-bottom: 100px;
+
+} 
+
+.bunner__name {
+	position: absolute;
+  width: 100%;
+	top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+	font-weight: 700;
+	font-size: 90px;
+	line-height: 80px;
+	text-align: center;
+	text-transform: uppercase;
+	color: var(--white);
+}
+.bunner_star-wars {
+  background-image: url('../img/star-wars-bunner.jpg');
+  
+}
+.bunner_vibes {
+	background-image: url('../img/vibes-bunner.jpg');
+}
+.bunner_wild-west {
+	background-image: url('../img/wild-west-bunner.jpg');
+}
+.bunner_neon {
+	background-image: url('../img/neon-bunner.jpg');
+}
+
+.page__annotation {
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 150%;
+	text-align: center;
+	max-width: 1000px;
+	margin: 0 auto;
+
+}
+
+.page__title {
+  margin-bottom: 40px;
+}
+
+.page__descript {
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 28px;
+}
+
+.page__info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 80px;
+}
+.text__part:not(:last-child) {
+	margin-bottom: 29px;
+}
+.rooms__list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	width: 100%;
+	column-gap: 10px;
+}
+.room__image {
+	position: relative;
+}
+.room__name {
+	 position: absolute;
+  max-width: 170px;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  font-family: 'Arial';
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 120%;
+  text-align: center;
+  color: var(--white);
+  text-transform: uppercase;
+	}
+	
+	@media(max-width: 1024px) {
+    .page__section {
+      padding: 35px 0;
+    }
+		.back {
+      font-size: 16px;
+      line-height: 175%;
+} 
+
+
+    .page__section {
+      padding-top: 0;
+      padding-bottom: 60px;
+    } 
+
+    .bunner {
+      height: 534px;
+      background-position-y: 20px;
+      margin-bottom: 60px;
+    }
+
+
+    .page__annotation {
+      font-size: 20px;
+      max-width: 800px;
+    }
+
+    .page__descript {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    .page__info {
+      gap: 30px;
+    }
+    .text__part:not(:last-child) {
+      margin-bottom: 24px;
+    }
+    .page__title {
+      margin-bottom: 30px;
+    }
+
+	}
+	@media(max-width: 768px) {
+    .page__section {
+      padding: 30px 0;
+    }
+		.page__img {
+			max-width: 329px;
+			height: 326px;
+			margin-right: 0;
+		}
+	}
+	@media (max-width: 650px) {
+			.page__info {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			gap: 20px;
+		}
+	}
+	
+	@media(max-width: 450px) {
+    .page__section {
+      padding: 15px 0;
+    }
+    .page__title {
+      margin-bottom: 15px;
+     
+    }
+		.bunner {
+			max-width: 320px;
+			height: 168px;
+			margin: 0 auto;
+		}
+		.bunner__name {
+			font-size: 30px;
+			line-height: 120%;
+		}
+	
+		.page__annotation {
+			max-width: 280px;
+			font-size: 16px;
+			line-height: 150%;
+}
+
+		.page__descript {
+			font-size: 20px;
+			line-height: 28px;
+		}
+
+		.page__info {
+			gap: 15px;
+		}
+
+		.page__text {
+			font-size: 12px;
+		line-height: 133%;
+		max-width: 280px;
+		padding: 0 20px;
+		margin: 0 auto;
+
+		}
+    .text__part:not(:last-child) {
+      margin-bottom: 18px;
+    }
+    .page__img {
+      height: 180px;
+    }
+
+    .rooms__list {
+      grid-template-columns: 1fr;
+      width: 100%;
+    }
+
+
+}	
+
