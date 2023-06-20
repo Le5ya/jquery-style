@@ -1,39 +1,77 @@
-const modalBtn = $('.header__button');
+const headerBtn = $('.header__button')
 const modalClose = $('.modal-order__close');
 
-modalBtn.on('click', function() {
-  $('.modal-order').show(500);
-});
-modalClose.on('click', function() {
-  $('.modal-order').hide(500);
-});
-
-
 const hambLine = $('.hamb-line');
-const menu = $('.menu');
-
-const header = $('.header__container');
-const headerBtn = $('.header__button');
-
 const nav = $('.header__nav');
+const header = $('.header__container');
+const btnWrap = $(`<div>`);
+const headerBtnM = headerBtn.clone();
+headerBtnM.addClass('header__button_mob');
+
+btnWrap.css({
+  'padding-top': '20px',
+  'padding-bottom': '20px',
+  'display': 'flex',
+  'justify-content': 'center'
+});
 
 
+btnWrap.addClass('btn-wrap');
+
+nav.append( btnWrap);
+btnWrap.append(headerBtnM);
 
 
-
+nav.hide();
 
 hambLine.on('click', function() {
   $(this).toggleClass('hamb-line_active');
 
   if(hambLine.hasClass('hamb-line_active')) {
-    nav.slideDown();
-    headerBtn.show()
+    nav.show();
   } else {
-    nav.slideUp();
-    headerBtn.hide();
+    nav.hide();
   }
   
 });
+headerBtnM
+
+
+headerBtn.on('click', function() {
+  $('.modal-order').show(500);
+});
+headerBtnM.on('click', function() {
+  $('.modal-order').show(500);
+});
+modalClose.on('click', function() {
+  $('.modal-order').hide(500);
+});
+// /отправка формы
+const modalOrderWrapper = $('.modal-order__wrapper');
+const modalOrderTitle = $('.modal-order__title');
+const form = $('.modal-order__form');
+
+ form.submit(function (event) {
+  event.preventDefault();
+  $.ajax({
+    url: 'https://jsonplaceholder.typicode.com/todos',
+    type: 'POST',
+    data: $(this).serialize(),
+    success(data) {
+      modalOrderTitle.text('Спасибо, ваша заявка принята, номер заявки ' + data.id)
+      $('.modal-order__form').slideUp(300);
+    },
+    error() {
+      modalOrderTitle.text('Что-то пошло не так, попробуйте позже')
+    }
+    
+  })
+  form.reset;
+
+});
+
+
+
 
 
 // if($('max-width_476px')) {
@@ -61,9 +99,3 @@ hambLine.on('click', function() {
 
 
 
-// hambLine.on('click', function() {
-//   hambImg.attr("src","img/menu-close.svg");
-//   menu.animate({
- 
-//   })
-// })
