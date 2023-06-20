@@ -22,8 +22,6 @@ nav.append( btnWrap);
 btnWrap.append(headerBtnM);
 
 
-nav.hide();
-
 hambLine.on('click', function() {
   $(this).toggleClass('hamb-line_active');
 
@@ -32,20 +30,43 @@ hambLine.on('click', function() {
   } else {
     nav.hide();
   }
+
+  $(document).on('click', function(event) {
+     if(
+      !nav.is(event.target) &&
+      !$('.menu').is(event.target) &&
+       $('.menu').has(event.target).length === 0  &&
+      !hambLine.is(event.target)
+      ) {
+      nav.hide();
+      hambLine.removeClass('hamb-line_active');
+     }
+  })
   
 });
 headerBtnM
-
+$('.modal-order').hide();
 
 headerBtn.on('click', function() {
-  $('.modal-order').show(500);
+  $('.modal-order').show(250);
 });
 headerBtnM.on('click', function() {
-  $('.modal-order').show(500);
+  $('.modal-order').show(250);
 });
 modalClose.on('click', function() {
-  $('.modal-order').hide(500);
+  $('.modal-order').hide(250);
 });
+$(document).on('click', function(event) {
+  if(
+    !$('.modal-order').is(event.target) &&
+    !$('.modal-order__wrapper').is(event.target) &&
+    !$('.modal-order__title').is(event.target) &&
+    !$('.modal-order__form').is(event.target) &&
+    $('.modal-order__form').has(event.target).length === 0  &&
+    !headerBtn.is(event.target) && !headerBtnM.is(event.target) ) {
+    $('.modal-order').hide(250); 
+  }
+})
 // /отправка формы
 const modalOrderWrapper = $('.modal-order__wrapper');
 const modalOrderTitle = $('.modal-order__title');
@@ -70,23 +91,6 @@ const form = $('.modal-order__form');
 
 });
 
-
-
-
-
-// if($('max-width_476px')) {
-//   const div = $(`<div>`);
-//   div.css('display', 'flex')
-//   div.css('justify-content', 'center')
-//   div.html(`
-//   <div class="wrap-btn">
-//     <button class="button header__button">Заказать звонок</button>
-//   </div>`)
-//   $('.header__nav_active').addClass('header__nav_mobile')
-//   $('.header__button').detach().appendTo($('header__nav_mobile'));
-//   // $('.header__button').css('margin', '0 auto');
-  
-// }
 
 
 
