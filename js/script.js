@@ -35,7 +35,7 @@ hambLine.on('click', function() {
      if(
       !nav.is(event.target) &&
       !$('.menu').is(event.target) &&
-       $('.menu').has(event.target).length === 0  &&
+      !($('.menu').has(event.target).length === 0)  &&
       !hambLine.is(event.target)
       ) {
       nav.hide();
@@ -89,7 +89,18 @@ const form = $('.modal-order__form');
   })
   form.reset;
 
+ });
+
+$('.acc__list').accordion({
+  active: true,
+  collapsible: true,
+  heightStyle: 'content',
+  icons: {
+    header: 'acc__item:after',
+    activeHeader: 'acc__item:after acc__item_active:after'
+  }
 });
+
 
 
 
