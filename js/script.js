@@ -38,11 +38,13 @@ hambLine.on('click', function() {
 
   $(document).on('click', function(event) {
      if(
-      !hambLine.is(event.target)
+       !hambLine.is(event.target) &&
+       !nav.is(event.target) &&
+       !$('.menu').is(event.target)
       ) {
       nav.hide();
       hambLine.removeClass('hamb-line_active');
-       console.log('klick');
+     
      }
   })
   
@@ -100,9 +102,10 @@ $('.acc__list').accordion({
   heightStyle: 'content',
   icons: {
     header: 'acc__item:after',
-    activeHeader: 'acc__item:after acc__item_active:after'
+    activeHeader: 'acc__item:after acc__item:active:after'
   }
 });
+
 
 
 
