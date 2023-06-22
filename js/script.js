@@ -6,6 +6,10 @@ const nav = $('.header__nav');
 const header = $('.header__container');
 const btnWrap = $(`<div>`);
 const headerBtnM = headerBtn.clone();
+
+$(document).on('click', function(e){
+  console.log(e.target);
+})
 headerBtnM.addClass('header__button_mob');
 
 btnWrap.css({
@@ -30,16 +34,15 @@ hambLine.on('click', function() {
   } else {
     nav.hide();
   }
+  
 
   $(document).on('click', function(event) {
      if(
-      !nav.is(event.target) &&
-      !$('.menu').is(event.target) &&
-      !($('.menu').has(event.target).length === 0)  &&
       !hambLine.is(event.target)
       ) {
       nav.hide();
       hambLine.removeClass('hamb-line_active');
+       console.log('klick');
      }
   })
   
