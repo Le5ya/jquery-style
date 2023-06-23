@@ -102,9 +102,28 @@ $('.acc__list').accordion({
   heightStyle: 'content',
   icons: {
     header: 'acc__item:after',
-    activeHeader: 'acc__item:after acc__item:active:after'
+    activeHeader: 'acc__item:after acc__item_active:after'
   }
 });
+
+  ymaps.ready(init);
+    function init(){
+      const kantMap = new ymaps.Map("map", {
+          center: [55.72430018418378, 37.563451096625386],
+          zoom: 19
+      });
+
+      const mark = new ymaps.Placemark([55.72430018418378, 37.563451096625386], {}, {
+        iconLayout: 'default#image',
+        iconImageHref: 'img/pin1.svg',
+        iconImageSize: [50, 50],
+        iconImageOffset: [0, 30]
+      })
+
+      kantMap.geoObjects.add(mark);
+
+      kantMap.controls.remove('zoomControl');
+    }
 
 
 

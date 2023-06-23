@@ -10,6 +10,9 @@
   <script defer src="js/jquery-3.7.0.min.js"></script>
   <script defer src="js/jquery-ui.min.js"></script>
   <script defer src="js/script.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=e656777d-aa7a-47c4-bf38-fc122f990847&lang=ru_RU"
+    type="text/javascript">
+    </script>
   <title>GAME OVER</title>
 </head>
 <body>
@@ -327,11 +330,11 @@
       </ul>
     </div>
   </section>
-  <section class="section questions acc">
-    <div class="container questions__container">
+  <section class="section acc question">
+    <div class="container acc__container question__container">
       <h2 class="section__title">Частые вопросы</h2>
-      <ul class="questions__list acc__list">
-        <li class="questions__item acc__item">
+      <ul class="acc__list question__list">
+        <li class="acc__item question__item">
           <h3 class="acc__button">
             <span class="acc__title">Можно ли забронировать комнату онлайн?</span>
           </h3>
@@ -341,18 +344,18 @@
             позвонив по телефону 8 (999) 958 - 48 - 38
           </p>
         </li>
-        <li class="acc__item questions__item questions__item_color_purple">
+        <li class="acc__item acc__item_color_purple">
           <h3 class="acc__button">
-            Могут ли мне вернуть деньги за бронь?
+            <span class="acc__title">Могут ли мне вернуть деньги за бронь?</span>
           </h3>
           <p class="acc__text">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat officiis nostrum asperiores in cum quibusdam
             eius enim repudiandae dolor consequuntur veritatis, ipsum sapiente sed eveniet nemo labore obcaecati quos aliquam.
           </p>
         </li>
-        <li class="acc__item questions__item">
+        <li class="acc__item question__item">
           <h3 class="acc__button">
-            Какая комната самая популярная?
+            <span class="acc__title">Какая комната самая популярная?</span>
           </h3>
           <p class="acc__text">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque placeat velit dolor, animi, ut distinctio dolorum
@@ -361,7 +364,7 @@
           </p>
       
         </li>
-        <li class="acc__item questions__item questions__item_color_purple">
+        <li class="acc__item acc__item_color_purple">
           <h3 class="acc__button">Как получить VIP-карту?</h3>
           <p class="acc__text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, facilis. Quaerat nostrum possimus accusamus esse
@@ -369,7 +372,7 @@
             aperiam!
           </p>
         </li>
-        <li class="acc__item questions__item">
+        <li class="acc__item question__item">
           <h3 class="acc__button">
             Какая комната самая популярная?
           </h3>
@@ -391,7 +394,7 @@
           <adress class="adress">
             <ul class="adress__list">
               <li class="adress__item adress__item_loc">
-                <a href="#" class="adress__text">г.Москва ул Усачёва, 29 k 3</a>
+                <a href="#" class="adress__text">г.Москва ул Усачёва,29 k3</a>
               </li>
               <li class="adress__item adress__item_tel">
                 <a href="tel:+79509302893" class="adress__text">8 (950) 930-28-93</a>
@@ -433,8 +436,8 @@
             </li>
           </ul>
         </div>
-        <div class="map">
-          <img src="img/map.jpg" alt="" class="map__image">
+        <div class="map" id="map" style="width: 100%; height: 400px">
+          <!--<img src="img/map.jpg" alt="" class="map__image">-->
         </div>
       </div>
       <div class="author">
