@@ -97,7 +97,7 @@
 }
 
 .adress__text {
-  /*display: inline-block;*/
+  display: inline-block;
   max-width: 300px;
   padding-right: 30px;
   padding-left: 27px;

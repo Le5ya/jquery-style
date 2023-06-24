@@ -1,7 +1,9 @@
 .acc {
   min-width: 100%;
 }
-
+.acc__list {
+  cursor: pointer;
+}
 .acc__item {
   background-color: var(--white);
   color: var(--red-gray);
@@ -30,33 +32,31 @@
   background-repeat: no-repeat;
   cursor: pointer; 
 }
-.acc__item_active:after{
+.active.acc__item:after{
   background-image: url("../img/close-purple.svg");
 }
 
 .acc__item_color_purple:after {
   background-image: url("../img/open.svg");
 }
-.acc__item_active_color_purple:after {
+.active.acc__item_color_purple:after {
   background-image: url("../img/close.svg");
 }
 
-.acc__item:hover:after {
+/*.acc__item:hover:after {
   transition-duration: 0.5s;
   background-image: url("../img/open-purple_h.svg");
-}
-.acc__item:active:after, 
-.acc__item:focus:after {
+}*/
+.acc__item:active:after {
   transition-duration: 0.5s;
   background-image: url("../img/close-purple.svg");
 }
 
-.acc__item_color_purple:hover:after {
+/*.acc__item_color_purple:hover:after {
   transition-duration: 0.5s;
   background-image: url("../img/open-hover.svg");
-}
-.acc__item_color_purple:active:after,
-.acc__item_color_purple:focus:after {
+}*/
+.acc__item_color_purple:active:after {
   transition-duration: 0.5s;
   background-image: url("../img/close.svg");
 }
@@ -69,55 +69,25 @@
 @media (max-width: 905px) {
 
   .acc__item {
-    position: relative;
-    background-color: var(--white);
-    color: var(--red-gray);
     font-weight: 700;
     font-size: 12px;
     line-height: 16px;
-    padding: 30px 70px;
     margin-bottom: 10px;
   }
 
-  .acc__item_color_purple {
-    background-color: var(--dark-purple);
-    color: var(--white);
-  }
-
   .acc__item:after {
-    position: absolute;
-    content: "";
-    display: block;
     right: 70px;
     top: 50%;
     transform: translateY(-50%);
-    float: right;
-    width: 46px;
-    height: 46px;
-    background-image: url("../img/open-purple.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    
     }
-    .acc__item_color_purple:after {
-      content: "";
-      display: block;
-      float: right;
-      width: 46px;
-      height: 46px;
-      background-image: url("../img/open.svg");
-      background-size: contain;
-      background-repeat: no-repeat;
-      cursor: pointer;
-    }
+  
 }
 @media (max-width: 500px) {
   .acc__item {
     font-size: 12px;
     line-height: 16px;
     padding: 15px 11px;
-    max-width: 280px;
+    max-width: 87%;
     margin-bottom: 10px;
   }
   .acc__item_color_purple {

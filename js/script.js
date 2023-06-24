@@ -7,9 +7,7 @@ const header = $('.header__container');
 const btnWrap = $(`<div>`);
 const headerBtnM = headerBtn.clone();
 
-$(document).on('click', function(e){
-  console.log(e.target);
-})
+
 headerBtnM.addClass('header__button_mob');
 
 btnWrap.css({
@@ -96,17 +94,27 @@ const form = $('.modal-order__form');
 
  });
 
+const elem = $('.acc__item')
+ 
 $('.acc__list').accordion({
   active: true,
   collapsible: true,
   heightStyle: 'content',
   icons: {
     header: 'acc__item:after',
-    activeHeader: 'acc__item:after acc__item_active:after'
+    activeHeader: 'acc__item:after acc__item_active:after',
   }
 });
+elem.on('click', function() {
+  elem.each(function (i) {
+    if (elem !== $(this)) {
+      elem.removeClass('active')
+    }
+  })
+   $(this).toggleClass('active');
+})
 
-  ymaps.ready(init);
+  ymaps.ready(init)
     function init(){
       const kantMap = new ymaps.Map("map", {
           center: [55.72430018418378, 37.563451096625386],
@@ -124,18 +132,3 @@ $('.acc__list').accordion({
 
       kantMap.controls.remove('zoomControl');
     }
-
-
-
-
-
-
-
-    
-
-    
-
-
-
-
-
