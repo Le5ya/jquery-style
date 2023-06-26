@@ -110,23 +110,15 @@ $('.acc__list').accordion({
   }
 });
 elem.on('click', function () {
-  $(this).removeClass('active');
-  elem.each(function (i) {
-    if (elem !== $(this)) {
-      elem.removeClass('active');
-    } 
-   
-     
-  })
-  
-    $(this).addClass('active');
 
+  if (!$(this).hasClass('active')) {
+    elem.removeClass('active')
+  }
+
+  $(this).toggleClass('active');
+ 
    
 })
-
-
-
-
 
 
   ymaps.ready(init)
