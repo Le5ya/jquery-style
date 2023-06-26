@@ -9,8 +9,8 @@
   <link rel="stylesheet" href="css/style.css">
   <script defer src="js/jquery-3.7.0.min.js"></script>
   <script defer src="js/jquery-ui.min.js"></script>
-  <script defer src="js/js.cookie.min.js"></script>
-  <script defer src="js/just-validate.production.min.js"></script>
+  <script src="js/js.cookie.min.js"></script>
+  <!--<script defer src="js/just-validate.production.min.js"></script>-->
   <script defer src="js/script.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=e656777d-aa7a-47c4-bf38-fc122f990847&lang=ru_RU"
     type="text/javascript">
@@ -457,10 +457,45 @@
           <div class="author__mail">ilina9825@gmail.com</div>
         </div>
       </div>
-    </div>  
-  </section>
+    </div>
+    </section>
+    <section class="payment-form" style="border: 1px solid red;">
+      <div class="payment-form__wrapper">
+        <div class="payment-form__secure">
+          <img src="img/secure.svg" alt="">
+          <span class="secure__text">Secure Checkout</span>
+        </div>
+        <div class="card">
+          <img class="card__logo" src="img/visa.svg" />
+          <img src="img/g13.png" class="g13" alt="g13">
+          <div class="card__number">xxxx xxxx xxxx 4444</div>
+          <div class="card__owner-name">Leskin Maksim</div>
+          <div class="card__time">04/24</div>
+          <img src="img/new-card.svg" alt="" class="add card__add">
+          <div class="scan__text">Add new card</div>
+          <img src="img/scan.svg" alt="" class="scan card__scan">
+          <div class="add__text">Scan & Add</div>
+        </div>
+    
+        <form action="#" class="payment-form__form">
+          <label class="form__item">Card Holder
+            <input class="form__input" type="text" name="name" placeholder="Leskin Maksim" required>
+          </label>
+          <label class="form__item">Card Number
+            <input class="form__input" type="text" name="name" placeholder="xxxx xxxx xxxx 4444" required>
+          </label>
+          <label class="form__item">CVV
+            <input class="form__input" type="number" name="" placeholder="xxx" required>
+          </label>
+          <label class="form__item">Card Expiry
+            <input class="form__input" type="datetime" name="" placeholder="04 / 24" required>
+          </label>
+        </form>
+        <button class="payment-form__button">CHECK OUT</button>
+      </div>
+    </section>
   <div class="alert-cookie">
-    <p class="alert-cookie__text">Раходясь на нашем сайте, вы соглашаетесь с политикой конфиденциальности</p>
+    <p class="alert-cookie__text">Находясь на нашем сайте, вы соглашаетесь с политикой конфиденциальности</p>
     <button class="alert-cookie__button" type="button">Ясно, понятно</button>
   </div>
   <div class="modal-order section">

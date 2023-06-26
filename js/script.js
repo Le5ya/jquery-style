@@ -139,6 +139,8 @@ elem.on('click', function () {
 
       kantMap.controls.remove('zoomControl');
 }
+
+
     
 const cookieAlert = document.querySelector('.alert-cookie');
 const cookieButton = document.querySelector('.alert-cookie__button');
