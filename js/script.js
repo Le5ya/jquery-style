@@ -94,7 +94,11 @@ const form = $('.modal-order__form');
 
  });
 
-const elem = $('.acc__item')
+const elem = $('.acc__item');
+
+
+
+
  
 $('.acc__list').accordion({
   active: true,
@@ -102,17 +106,28 @@ $('.acc__list').accordion({
   heightStyle: 'content',
   icons: {
     header: 'acc__item:after',
-    activeHeader: 'acc__item:after acc__item_active:after',
+    activeHeader: 'acc__item:after active',
   }
 });
-elem.on('click', function() {
+elem.on('click', function () {
+  $(this).removeClass('active');
   elem.each(function (i) {
     if (elem !== $(this)) {
-      elem.removeClass('active')
-    }
+      elem.removeClass('active');
+    } 
+   
+     
   })
-   $(this).toggleClass('active');
+  
+    $(this).addClass('active');
+
+   
 })
+
+
+
+
+
 
   ymaps.ready(init)
     function init(){
@@ -131,4 +146,19 @@ elem.on('click', function() {
       kantMap.geoObjects.add(mark);
 
       kantMap.controls.remove('zoomControl');
-    }
+}
+    
+const cookieAlert = document.querySelector('.alert-cookie');
+const cookieButton = document.querySelector('.alert-cookie__button');
+
+cookieButton.addEventListener('click', () => {
+  cookieAlert.classList.remove('alert-cookie_no-ready');
+  Cookies.set('dom-ready-cookie', 'true', {
+    expires: 10,
+  }) 
+});
+
+if (!Cookies.get('dom-ready-cookie')) {
+  cookieAlert.classList.add('alert-cookie_no-ready');
+}
+

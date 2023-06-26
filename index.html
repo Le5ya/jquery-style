@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="css/style.css">
   <script defer src="js/jquery-3.7.0.min.js"></script>
   <script defer src="js/jquery-ui.min.js"></script>
+  <script defer src="js/js.cookie.min.js"></script>
+  <script defer src="js/just-validate.production.min.js"></script>
   <script defer src="js/script.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=e656777d-aa7a-47c4-bf38-fc122f990847&lang=ru_RU"
     type="text/javascript">
@@ -335,42 +337,50 @@
       <h2 class="section__title">Частые вопросы</h2>
       <ul class="acc__list question__list">
         <li class="acc__item question__item">
-          <h3 class="acc__button">
+          <h3 class="acc__button ">
             <span class="acc__title">Можно ли забронировать комнату онлайн?</span>
           </h3>
-          <p class="acc__text">Да, забронировать комнату вы можете онлайн,
-            заполнив форму на нашем сайте. Также вы можете
-            забронировать комнату
-            позвонив по телефону 8 (999) 958 - 48 - 38
-          </p>
+          <div class="acc__wrapper">
+            <p class="acc__text">Да, забронировать комнату вы можете онлайн,
+              заполнив форму на нашем сайте. Также вы можете
+              забронировать комнату
+              позвонив по телефону <span class="phon-namber">8 (999) 958 - 48 - 38</span>
+              </p>
+          </div>
         </li>
         <li class="acc__item acc__item_color_purple">
           <h3 class="acc__button">
             <span class="acc__title">Могут ли мне вернуть деньги за бронь?</span>
           </h3>
-          <p class="acc__text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat officiis nostrum asperiores in cum quibusdam
-            eius enim repudiandae dolor consequuntur veritatis, ipsum sapiente sed eveniet nemo labore obcaecati quos aliquam.
-          </p>
+          <div class="acc__wrapper">
+            <p class="acc__text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat officiis nostrum asperiores in cum quibusdam
+              eius enim repudiandae dolor consequuntur veritatis, ipsum sapiente sed eveniet nemo labore obcaecati quos aliquam.
+            </p>
+          </div>
         </li>
         <li class="acc__item question__item">
           <h3 class="acc__button">
             <span class="acc__title">Какая комната самая популярная?</span>
           </h3>
+        <div class="acc__wrapper">
           <p class="acc__text">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque placeat velit dolor, animi, ut distinctio dolorum
             veritatis accusantium rem, exercitationem enim quos molestias laborum at quaerat accusamus? Distinctio, facere
             recusandae.
           </p>
+        </div>
       
         </li>
         <li class="acc__item acc__item_color_purple">
           <h3 class="acc__button">Как получить VIP-карту?</h3>
-          <p class="acc__text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, facilis. Quaerat nostrum possimus accusamus esse
-            saepe quod cum corporis voluptas iusto inventore dolorum id, obcaecati, culpa dolore veritatis, exercitationem
-            aperiam!
-          </p>
+          <div class="acc__wrapper">
+            <p class="acc__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, facilis. Quaerat nostrum possimus accusamus esse
+              saepe quod cum corporis voluptas iusto inventore dolorum id, obcaecati, culpa dolore veritatis, exercitationem
+              aperiam!
+            </p>
+          </div>
         </li>
         <li class="acc__item question__item">
           <h3 class="acc__button">
@@ -449,6 +459,10 @@
       </div>
     </div>  
   </section>
+  <div class="alert-cookie">
+    <p class="alert-cookie__text">Раходясь на нашем сайте, вы соглашаетесь с политикой конфиденциальности</p>
+    <button class="alert-cookie__button" type="button">Ясно, понятно</button>
+  </div>
   <div class="modal-order section">
     <div class="modal-order__wrapper">
       <button class="modal-order__close">

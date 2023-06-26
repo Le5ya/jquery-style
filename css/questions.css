@@ -10,8 +10,13 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 46px;
-  padding: 30px 70px;
+  padding: 0;
   margin-bottom: 20px;
+}
+.acc__button {
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 70px;
 }
 
 .acc__item_color_purple {
@@ -19,12 +24,10 @@
   color: var(--white);
 }
 
-.acc__item:after{
+.acc__item .acc__button:after{
   content: "";
   display: block;
   float: right;
-  /*top: 50%;*/
-  transform: translateY(-100%);
   width: 46px;
   height: 46px;
   background-image: url("../img/open-purple.svg");
@@ -32,37 +35,49 @@
   background-repeat: no-repeat;
   cursor: pointer; 
 }
-.active.acc__item:after{
+.active.acc__item .acc__button:after{
   background-image: url("../img/close-purple.svg");
 }
 
-.acc__item_color_purple:after {
+.acc__item_color_purple .acc__button:after {
   background-image: url("../img/open.svg");
 }
-.active.acc__item_color_purple:after {
+.active.acc__item_color_purple .acc__button:after {
   background-image: url("../img/close.svg");
 }
 
-/*.acc__item:hover:after {
+/*.acc__item .acc__button:hover:after {
   transition-duration: 0.5s;
   background-image: url("../img/open-purple_h.svg");
 }*/
-.acc__item:active:after {
+.acc__item .acc__button:active:after {
   transition-duration: 0.5s;
   background-image: url("../img/close-purple.svg");
 }
 
-/*.acc__item_color_purple:hover:after {
+/*.acc__item_color_purple .acc__button:hover:after {
   transition-duration: 0.5s;
   background-image: url("../img/open-hover.svg");
 }*/
-.acc__item_color_purple:active:after {
+.acc__item_color_purple .acc__button:active:after {
   transition-duration: 0.5s;
   background-image: url("../img/close.svg");
 }
 
 .acc__text {
-  max-width: 90%;
+  padding: 57px 70px 100px 59px; 
+  font-size: 24px;
+  font-family: Arial;
+  font-weight: normal;
+  line-height: 28px;
+  color: var(--red-gray);
+}
+.acc__wrapper {
+  background-color: var(--white);
+  color: var(--red-gray);
+}
+.phon-namber {
+font-weight: bold;
 }
 
 
@@ -75,43 +90,73 @@
     margin-bottom: 10px;
   }
 
-  .acc__item:after {
+  .acc__button:after {
     right: 70px;
     top: 50%;
     transform: translateY(-50%);
     }
   
 }
-@media (max-width: 500px) {
-  .acc__item {
-    font-size: 12px;
-    line-height: 16px;
-    padding: 15px 11px;
-    max-width: 87%;
-    margin-bottom: 10px;
-  }
-  .acc__item_color_purple {
-    background-color: var(--white);
-    color: var(--red-gray);
-  }
-  .acc__item:after {
-    right: 5px;
-    width: 30px;
-    height: 30px;
+@media (max-width: 530px) {
+  .acc__button:after {
+    right: 0;
+    bottom: 0;
+     transform: translateX(-50%);
+     transform: translateY(-50%);
     }
-    .acc__item_color_purple:after {
-      background-image: url("../img/open-purple.svg");
-    }
-    .acc__item:hover:after,
-    .acc__item_color_purple:hover:after {
-  transition-duration: 0.5s;
-  background-image: url("../img/open-purple_h.svg");
 }
-.acc__item:active:after,
-.acc__item_color_purple:active:after {
-  transition-duration: 0.5s;
-  background-image: url("../img/close-purple.svg");
+@media (max-width: 500px) {
+    .acc__button{
+      font-size: 12px;
+      line-height: 16px;
+      padding: 15px 12px;
+      width: 100%;
+      margin-bottom: 10px;
+      margin-right: 0;
+    }
+    .acc__title {
+      display: inline-block;
+    max-width: 80%;
+    }
+    .acc__item_color_purple {
+      background-color: var(--white);
+      color: var(--red-gray);
+    }
+    .acc__button:after {
+      width: 30px;
+      height: 30px;
+      
+      transform: translateY(-15%);
+      }
+      .acc__item_color_purple .acc__button:after {
+        background-image: url("../img/open-purple.svg");
+      }
+      .acc__item .acc__button:hover:after {
+    transition-duration: 0.5s;
+    background-image: url("../img/open-purple_h.svg");
+  }
+  .acc__item .acc__button:active:after {
+    transition-duration: 0.5s;
+    background-image: url("../img/close-purple.svg");
+  }
+
+  .acc__text {
+    font-size: 12px;
+      line-height: 16px;
+      padding: 15px 5px;
+      width: 100%;
+  
+
+  }
+  .acc__item .acc__button:after{
+    background-image: url("../img/open1.svg");
+    height: 30px;
+
+  }
+  .active.acc__item .acc__button:after{
+    background-image: url("../img/close-purple.svg");
+  }
+
 }
 
-} 
 
