@@ -9,8 +9,10 @@
   <link rel="stylesheet" href="css/style.css">
   <script defer src="js/jquery-3.7.0.min.js"></script>
   <script defer src="js/jquery-ui.min.js"></script>
-  <script src="js/js.cookie.min.js"></script>
-  <!--<script defer src="js/just-validate.production.min.js"></script>-->
+  <script defer src="js/js.cookie.min.js"></script>
+  <script defer src="js/inputmask.min.js"></script>
+  <script defer src="js/axios.min.js"></script>
+  <script defer src="js/just-validate.production.min.js"></script>
   <script defer src="js/script.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=e656777d-aa7a-47c4-bf38-fc122f990847&lang=ru_RU"
     type="text/javascript">
@@ -459,39 +461,53 @@
       </div>
     </div>
     </section>
-    <section class="payment-form" style="border: 1px solid red;">
-      <div class="payment-form__wrapper">
-        <div class="payment-form__secure">
-          <img src="img/secure.svg" alt="">
-          <span class="secure__text">Secure Checkout</span>
+    <section class=" section payment">
+      <div class="payment__page">
+        <div class="payment__container">
+        <div class="secure payment__secure">
+          <img class="vidj secure__vidj" src="img/secure.svg" alt="">
+          <span class="vidj-text secure__vidj-text">Secure Checkout</span>
         </div>
-        <div class="card">
-          <img class="card__logo" src="img/visa.svg" />
-          <img src="img/g13.png" class="g13" alt="g13">
+        <div class="card payment__card">
+          <div class="logo">
+            <img class="logo__title" src="img/visa.svg" />
+            <img src="img/g13.png" class="logo__g13" alt="g13">
+          </div>
           <div class="card__number">xxxx xxxx xxxx 4444</div>
-          <div class="card__owner-name">Leskin Maksim</div>
-          <div class="card__time">04/24</div>
-          <img src="img/new-card.svg" alt="" class="add card__add">
-          <div class="scan__text">Add new card</div>
-          <img src="img/scan.svg" alt="" class="scan card__scan">
-          <div class="add__text">Scan & Add</div>
+          <div class="owner card__owner">
+            <div class="owner__name">Leskin Maksim</div>
+            <div class="owner__time">04/24</div>
+          </div>
         </div>
-    
-        <form action="#" class="payment-form__form">
+        <div class="payment__alter">
+          <div class="add">
+            <img src="img/new-card.svg" alt="" class="vidj_alt">
+          <div class="vidj-text  vidj-text_alt">Add new card</div>
+          </div>
+          <div class="scan">
+            <img src="img/scan.svg" alt="" class="vidj_alt">
+            <div class="vidj-text vidj-text_alt">Scan & Add</div>
+          </div>
+        </div>
+        <form action="#" class="form payment__form">
           <label class="form__item">Card Holder
-            <input class="form__input" type="text" name="name" placeholder="Leskin Maksim" required>
+            <input class="form__input form__input_big" type="text" name="name" placeholder="Leskin Maksim" required>
           </label>
           <label class="form__item">Card Number
-            <input class="form__input" type="text" name="name" placeholder="xxxx xxxx xxxx 4444" required>
+            <input class="form__input form__input_big" type="text" name="name" placeholder="xxxx xxxx xxxx 4444" required>
           </label>
-          <label class="form__item">CVV
-            <input class="form__input" type="number" name="" placeholder="xxx" required>
-          </label>
-          <label class="form__item">Card Expiry
-            <input class="form__input" type="datetime" name="" placeholder="04 / 24" required>
-          </label>
+          <div class="form__data">
+            <label class="form__item form__item_small">Card Expiry
+              <input class="form__input form__input_small" type="datetime" name="" placeholder="04 / 24" required>
+            </label>
+            <label class="form__item form__item_small">CVV
+              <input class="form__input form__input_small" type="text" name="" placeholder="xxx" required>
+            </label>
+            
+          </div>
         </form>
-        <button class="payment-form__button">CHECK OUT</button>
+        <button class="payment__button">CHECK OUT</button>
+      </div>
       </div>
     </section>
   <div class="alert-cookie">
@@ -508,7 +524,7 @@
           <input class="modal-order__input custom__input" type="text" name="name" required>
         </label>
         <label class="modal-order__label custom__item">Телефон
-          <input class="modal-order__input custom__input" type="number" name="phone" required>
+          <input class="custom__input modal-order__input modal-order__input_tel" type="number" name="phone" required>
         </label>
         <button class="modal-order__submit button wrap__button">Позвонить мне</button>
       </form>
