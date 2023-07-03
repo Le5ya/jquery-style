@@ -151,57 +151,7 @@ cookieButton.addEventListener('click', () => {
 if (!Cookies.get('dom-ready-cookie')) {
   cookieAlert.classList.add('alert-cookie_no-ready');
 }
-// Mask
 
-const inputTel= document.querySelector('.modal-order__input_tel');
-const telMask = new Inputmask('+7 (999)-999-99-99');
 
-telMask.mask(inputTel);
 
-const justValidate = new JustValidate('.modal-order__form');
-
-ustValidate
-  .addField('.modal-order__input', [
-      {
-        rule: 'required',
-        errorMessage: 'Укажите ваше имя'
-      },
-      {
-        rule: 'minLength',
-        value: 2,
-        errorMessage: 'Слишком короткое имя'
-      },
-      {
-        rule: 'maxLength',
-        value: 30,
-        errorMessage: 'Слишком длинное имя'
-      }
-  ])
-  .addField('.modal-order__input_tel', [
-    {
-      rule: 'required',
-      errorMessage: 'Укажите ваш телефон'
-    },
-    {
-      validator(value) {
-        const phone = inputTel.inputmask.unmaskedvalue();
-        return !!(Number(phone) && phone.length === 10);
-      },
-      errorMessage: 'Tелефон не корректный'
-    }
-  ])
-  .onSucces(event => {
-    const target = event.target;
-    axios.post('https://jsonplaceholder.typicode.com/posts', {
-      name: target.name.value,
-      tel: inputTel.inputmask.unmaskedvalue(),
-    })
-    .then(response => {
-      target.reset();
-      modalOrderTitle.textContent = `Спасибо, ваша заявуа принята, номер заявки ${responce.data.id}!`
-    }) 
-    .catch(err => {
-      modalOrderTitle.textContent = `Что-то пошло не так, попробуйте снова!`
-    })
-  })
 
