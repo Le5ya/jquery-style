@@ -117,7 +117,7 @@ elem.on('click', function () {
    
 })
 
-  ymaps.ready(init)
+//   ymaps.ready(init)
     function init(){
       const kantMap = new ymaps.Map("map", {
           center: [55.72430018418378, 37.563451096625386],
@@ -134,7 +134,7 @@ elem.on('click', function () {
       kantMap.geoObjects.add(mark);
 
       kantMap.controls.remove('zoomControl');
-}
+ }
 
 
     
@@ -151,6 +151,35 @@ cookieButton.addEventListener('click', () => {
 if (!Cookies.get('dom-ready-cookie')) {
   cookieAlert.classList.add('alert-cookie_no-ready');
 }
+
+// swiper
+
+new Swiper('.swiper', {
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 10,
+  breakpoints: {
+    320: {
+      spaceBetween: 5,
+    },
+    480: {
+      spaceBetween: 10
+    },
+    768: {
+      spaceBetween: 20
+    }
+  },
+  // autoplay: {
+  //   dalay: 3000,
+  // },
+
+ 
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+
+});
 
 
 

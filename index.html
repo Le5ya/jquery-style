@@ -7,15 +7,18 @@
   <link rel="icon" type="image/svg+xml" href="img/icon.svg">
   <link rel="icon" type="image/png" href="img/icon.png">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css"/>
+
+<script defer src="js/swiper-bundle.min.js"></script>
   <script defer src="js/jquery-3.7.0.min.js"></script>
   <script defer src="js/jquery-ui.min.js"></script>
   <script defer src="js/js.cookie.min.js"></script>
-  <script defer src="js/inputmask.min.js"></script>
+  <!-- <script defer src="js/inputmask.min.js"></script> -->
   <script defer src="js/axios.min.js"></script>
-  <script defer src="js/just-validate.production.min.js"></script>
+  <!-- <script defer src="js/just-validate.production.min.js"></script> -->
+  <!-- <script  src="https://api-maps.yandex.ru/2.1/?apikey=e656777d-aa7a-47c4-bf38-fc122f990847lang=ru_RU" type="text/javascript">
+  </script> -->
   <script defer src="js/script.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=e656777d-aa7a-47c4-bf38-fc122f990847lang=ru_RU" type="text/javascript">
-  </script>
   <title>GAME OVER</title>
 </head>
 <body>
@@ -284,52 +287,76 @@
       </div>
     </div>
   </section>
-  <section class="section reviews" id="reviews">
+  <section class="section reviews slider" id="reviews">
     <div class="container reviews__container">
       <h2 class="section__title">Отзывы посетителей</h2>
       <ul reviews__list>
-        <li class="review">
-          <div class="review__wrapper">
-            <figure style="float: left" class="review__person">
-              <div class="review__img review__img-1"></div>
-                <img class="review__photo" src="img/review-1.jpg" alt="">
-              <figcaption class="review__sign">Макс Самойлов</figcaption>
-            </figure>
-            <div class="clearfix"></div>
-            <p class="review__text">
-              Отмечали здесь день рождения с компанией друзей, все было очень круто! VR очки это просто   бомба, никогда еще я не был в таком полном игровом погружении. Сервис на высоте!
-            </p>
-          </div>
-        </li>
-        <li class="review">
-          <div class="review__wrapper">
-            <figure class="review__person">
-              <div class="review__img review__img-2"></div>
-              <img class="review__photo" src="img/review-2.jpg" alt="">
-              <figcaption class="review__sign">Оксана Григорьева</figcaption>
-            </figure>
-            <div class="clearfix"></div>
-            <div class="review__text">
-              Были в комнате Дикий Запад, пели в караоке под Шакиру, отличный получился корпоратив! У нас в городе больше нет подобных заведений
+        <div class="container slider-container">
+          <!-- Slider main container -->
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide slide">
+                <li class="review">
+                  <div class="review__wrapper">
+                    <figure style="float: left" class="review__person">
+                      <div class="review__img review__img-1"></div>
+                        <img class="review__photo" src="img/review-1.jpg" alt="">
+                      <figcaption class="review__sign">Макс Самойлов</figcaption>
+                    </figure>
+                    <div class="clearfix"></div>
+                    <p class="review__text">
+                      Отмечали здесь день рождения с компанией друзей, все было очень круто! VR очки это просто   бомба, никогда еще я не был в таком полном игровом погружении. Сервис на высоте!
+                    </p>
+                  </div>
+                </li>
+              </div>
+              <div class="swiper-slide slide">
+                <li class="review">
+                  <div class="review__wrapper">
+                    <figure class="review__person">
+                      <div class="review__img review__img-2"></div>
+                      <img class="review__photo" src="img/review-2.jpg" alt="">
+                      <figcaption class="review__sign">Оксана Григорьева</figcaption>
+                    </figure>
+                    <div class="clearfix"></div>
+                    <div class="review__text">
+                      Были в комнате Дикий Запад, пели в караоке под Шакиру, отличный получился корпоратив! У нас в городе больше нет подобных заведений
+                    </div>
+                  </div>
+                  
+                </li>
+              </div>
+              <div class="swiper-slide slide">
+                <li class="review">
+                  <div class="review__wrapper">
+                    <figure class="review__person">
+                      <div class="review__img review__img-3"></div>
+                      <img class="review__photo" src="img/review-3.jpg" alt="">
+                      <figcaption class="review__sign">Никита Ященко</figcaption>
+                      </figure>
+                      <div class="clearfix"></div>
+                    <p class="review__text">
+                      Немного подвисала игра в VR очках, а так все норм. Крутое оформление комнаты в стиле звездных войн, попал в атмосферу космоса
+                    </p>
+                  </div>
+                  
+                </li>
+              </div>
+              ...
             </div>
+            <!-- If we need pagination -->
+            <!-- <div class="swiper-pagination"></div> -->
+  
           </div>
-          
-        </li>
-        <li class="review">
-          <div class="review__wrapper">
-            <figure class="review__person">
-              <div class="review__img review__img-3"></div>
-              <img class="review__photo" src="img/review-3.jpg" alt="">
-              <figcaption class="review__sign">Никита Ященко</figcaption>
-              </figure>
-              <div class="clearfix"></div>
-            <p class="review__text">
-              Немного подвисала игра в VR очках, а так все норм. Крутое оформление комнаты в стиле звездных войн, попал в атмосферу космоса
-            </p>
-          </div>
-          
-        </li>
-      
+              <div class="button-prev">
+                <img src="img/prev.svg" alt="">
+              </div>
+              <div class="button-next">
+                <img src="img/next.svg" alt="">
+              </div>
+        </div>
       </ul>
     </div>
   </section>
