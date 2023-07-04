@@ -117,10 +117,11 @@ elem.on('click', function () {
    
 })
 
-//   ymaps.ready(init)
+
+ ymaps.ready(init);
     function init(){
       const kantMap = new ymaps.Map("map", {
-          center: [55.72430018418378, 37.563451096625386],
+          center: [55.724282057522785, 37.5634189101561],
           zoom: 19
       });
 
@@ -135,7 +136,29 @@ elem.on('click', function () {
 
       kantMap.controls.remove('zoomControl');
  }
+ 
+// let map;
+// main();
+// async function main() {
+    // Промис `ymaps3.ready` будет зарезолвлен, когда загрузятся все компоненты API
+    // await ymaps3.ready;
 
+    // Создание карты
+    // map = new ymaps3.YMap(document.getElementById('map'), {
+    //     location: {
+            // Координаты центра карты
+            // Порядок по умолчанию: «долгота, широта»
+            // center: [55.72429414196442, 37.56347255433497],
+
+            // Уровень масштабирования
+            // Допустимые значения: от 0 (весь мир) до 21.
+            zoom: 10
+    //     }
+    // });
+
+    // Добавляем слой для отображения схематической карты
+    // map.addChild(new ymaps3.YMapDefaultSchemeLayer());
+// }
 
     
 const cookieAlert = document.querySelector('.alert-cookie');
