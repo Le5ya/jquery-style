@@ -147,7 +147,7 @@
       <h2 class="section__title">Забронировать зал просто</h2>
       <form class="form book__form"  
         id="book_up"
-        action="https://jsonplaceholder.typicode.com/posts"
+        action="https://postman-echo.com/post"
         method="POST">
         <fieldset class="fieldset halls-fieldset">
           <legend class="fieldset__title">Выбери зал</legend>
@@ -497,7 +497,8 @@
       <button class="modal-order__close">
       </button>
       <h2 class="modal-order__title section__title">Заказать звонок</h2>
-      <form action="#" class="modal-order__form custom">
+      <form action="js/script.js" id="modal" class="modal-order__form custom"
+       method="post">
         <label class="modal-order__label custom__item">Имя
           <input class="modal-order__input custom__input" type="text" name="name" required>
         </label>

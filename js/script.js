@@ -78,7 +78,7 @@ const form = $('.modal-order__form');
  form.submit(function (event) {
   event.preventDefault();
   $.ajax({
-    url: 'https://jsonplaceholder.typicode.com/todos',
+    url: 'https://postman-echo.com/post/',
     type: 'POST',
     data: $(this).serialize(),
     success(data) {
