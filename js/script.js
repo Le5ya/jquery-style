@@ -1,3 +1,13 @@
+$('a[href*="#"]').on('click', function() {
+  $('html, body').animate({
+    scrollTop: $($.attr(this, 'href')).offset().top + "px"
+  }, {duration: 1000,
+      easing: "linear"
+  } );
+  return false;
+});
+
+
 const headerBtn = $('.header__button')
 const modalClose = $('.modal-order__close');
 
@@ -6,6 +16,10 @@ const nav = $('.header__nav');
 const header = $('.header__container');
 const btnWrap = $(`<div>`);
 const headerBtnM = headerBtn.clone();
+
+const modalOrder = $('.modal-order');
+const modalOrderTitle = $('.modal-order__title');
+const modalForm = $('.modal-order__form');
 
 
 headerBtnM.addClass('header__button_mob');
@@ -47,55 +61,151 @@ hambLine.on('click', function() {
   })
   
 });
-headerBtnM
-$('.modal-order').hide();
+// headerBtnM
+modalOrder.hide();
 
 headerBtn.on('click', function() {
-  $('.modal-order').show(250);
+  modalOrder.show(250);
 });
 headerBtnM.on('click', function() {
-  $('.modal-order').show(250);
+  modalOrder.show(250);
 });
 modalClose.on('click', function() {
-  $('.modal-order').hide(250);
+  modalOrder.slideUp(300);
 });
 $(document).on('click', function(event) {
   if(
-    !$('.modal-order').is(event.target) &&
+    !modalOrder.is(event.target) &&
     !$('.modal-order__wrapper').is(event.target) &&
     !$('.modal-order__title').is(event.target) &&
     !$('.modal-order__form').is(event.target) &&
     $('.modal-order__form').has(event.target).length === 0  &&
     !headerBtn.is(event.target) && !headerBtnM.is(event.target) ) {
-    $('.modal-order').hide(250); 
+    modalOrder.slideUp(300); 
   }
 })
-// /отправка формы
-const modalOrderWrapper = $('.modal-order__wrapper');
-const modalOrderTitle = $('.modal-order__title');
-const form = $('.modal-order__form');
+// mask
+const inputTelMod = document.querySelector('.modal-order__input_tel');
+const telMask = new Inputmask('+7(999) 999-99-99');
+telMask.mask(inputTelMod);
 
- form.submit(function (event) {
+const customTel = document.querySelector('.custom__input_tel');
+telMask.mask(customTel);
+
+// Validate
+
+const justValidate = new JustValidate('.modal-order__form');
+
+justValidate
+.addField('.modal-order__input', [
+  {
+    rule: 'required',
+    errorMessage: 'Обязательно заполнить'
+  }
+])
+.addField('.modal-order__input_tel', [
+  {
+    rule: 'required',
+    errorMessage: 'Обязательно заполнить',
+  },
+  {
+  validator(value) {
+  const phone = inputTelMod.inputmask.unmaskedvalue();
+  return !!(Number(phone) && phone.length === 10);
+  },
+  errorMessage: 'Телефон не корректный'
+  }
+])
+
+
+const justValidateCustom = new JustValidate('.book__form');
+
+justValidateCustom
+.addField('.custom__input_name', [
+  {
+    rule: 'required',
+    errorMessage: 'Обязательно'
+  }
+])
+.addField('.custom__input_surname', [
+  {
+    rule: 'required',
+    errorMessage: 'Обязательно'
+  }
+])
+.addField('.custom__input_tel', [
+  {
+    rule: 'required',
+    errorMessage: 'Обязательно',
+  },
+  {
+  validator(value) {
+  const custPhone = customTel.inputmask.unmaskedvalue();
+  return !!(Number(custPhone) && custPhone.length === 10);
+  },
+  errorMessage: 'Телефон некорректный'
+  }
+])
+.addField('.custom__input_e', [
+  {
+    rule: 'required',
+    errorMessage: 'Обязательно'
+  },
+  {
+    rule: 'email',
+    errorMessage: 'Email некорректный'
+  }
+])
+
+// /отправка формы
+
+modalForm.submit(function (event) {
   event.preventDefault();
   $.ajax({
-    url: 'https://postman-echo.com/post/',
+    url: 'https://jsonplaceholder.typicode.com/todos',
     type: 'POST',
     data: $(this).serialize(),
-    success(data) {
-      modalOrderTitle.text('Спасибо, ваша заявка принята, номер заявки ' + data.id)
-      $('.modal-order__form').slideUp(300);
+    success: function(data) {
+      modalForm[0].reset();
+      modalOrderTitle.text('Спасибо, ваша заявка принята, номер заявки ' + data.id);
+      // modalOrder.slideUp(1000);
+       
     },
     error() {
       modalOrderTitle.text('Что-то пошло не так, попробуйте позже')
     }
     
   })
-  form.reset;
-
+    
  });
+ 
+ 
+
+
+
+const bookForm = $('.book__form');
+const customTitle = $('.custom__title');
+
+bookForm.submit(function(event) {
+  event.preventDefault();
+  $.ajax({
+    url: 'https://jsonplaceholder.typicode.com/todos',
+    type: 'POST',
+    data: $(this).serialize(),
+    success(data) {
+      bookForm[0].reset();
+      customTitle.text('Спасибо,  заявка принята, номер заявки ' + data.id);
+    },
+    error() {
+      modalOrderTitle.text('Что-то пошло не так, попробуйте позже')
+    }
+  })
+  
+  
+});
+
 
 const elem = $('.acc__item');
-
 
 $('.acc__list').accordion({
   active: true,

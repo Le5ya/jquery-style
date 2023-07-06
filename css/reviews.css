@@ -203,6 +203,11 @@ position: relative;
     width: 28px;
     height: 28px;
     top: 10%;
- 
+}
+.button-prev {
+  left: 0;
+}
+.button-next {
+  right: 0;
 }
 }
