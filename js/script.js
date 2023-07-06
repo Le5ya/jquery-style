@@ -121,6 +121,24 @@ justValidate
 const justValidateCustom = new JustValidate('.book__form');
 
 justValidateCustom
+.addField('.custom__input_date', [
+  {
+    rule: 'required',
+    errorMessage: 'Обязательно'
+  }
+])
+.addField('.custom__input_time', [
+  {
+    rule: 'required',
+    errorMessage: 'Обязательно'
+  }
+])
+.addField('.custom__input_num', [
+  {
+    rule: 'required',
+    errorMessage: 'Обязательно'
+  }
+])
 .addField('.custom__input_name', [
   {
     rule: 'required',
