@@ -1,5 +1,6 @@
 .header {
   padding: 38px 0;
+  
 }
 .header__container {
   display: flex;
@@ -13,6 +14,7 @@
   display: flex;
   justify-content: space-between;
   width: 587px;
+  
 }
 .menu__item {
   font-weight: 400;
@@ -47,6 +49,7 @@
   border: 3px solid var(--light-purple);
   transition-duration: 0.5s;
   transition-property: background-color, border, padding;
+ 
 }
 .btn-wrap {
  position: absolute;
@@ -112,11 +115,13 @@
     top: 107px;
     background: #1B1A1B;
     z-index: 20;
+   
+   
   }
   .menu {
     flex-direction: column;
     align-items: center;
-   justify-content: space-between;
+    justify-content: space-between;
     gap: 20px;
     width: 70%;
     margin: 0 auto;

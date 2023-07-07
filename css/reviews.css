@@ -59,6 +59,7 @@
 }
 .slider-container {
 position: relative;
+margin-left: -20px;
 }
 .button-prev,
 .button-next {
@@ -74,12 +75,15 @@ position: relative;
 }
 
 .button-prev {
-  left: -30px;
+  left: -10px;
 }
 .button-next {
-  right: -30px;
+  right: -20px;
 }
 @media (max-width: 1040px) {
+  .review {
+    padding: 0 50px;
+  }
     .review:not(:last-child) {
     margin-bottom: 30px;
   }
@@ -124,9 +128,13 @@ position: relative;
     height: 36px;
     top: 25%;
  
-}
+  }
+  
 }
 @media (max-width: 904px) {
+  .review {
+    padding: 0 25px;
+  }
     .review__img {
       width: 153px;
       height: 153px;
@@ -137,7 +145,6 @@ position: relative;
       margin-bottom: 17px;
      
   }
-
   .review__sign {
     font-size: 14px;
     line-height: 20px;
@@ -153,9 +160,19 @@ position: relative;
   .button-next {
     top: 25%;
  
-}
+  }
+  .button-prev {
+    left: 0;
+  }
+  .button-next {
+    right: 0;
+  }
+  
 }
 @media (max-width: 450px) {
+  .review {
+    margin: 0 auto;
+  }
     .review__wrapper {
       position: relative;
       min-height: 150px;
@@ -164,10 +181,11 @@ position: relative;
 }
     .review__person {
       width: 100%;
-      min-height: 100px;
-      margin-right: 0;
+      min-height: 10px;
+      margin: 0 auto;
       text-align: center;
       margin-bottom: 20px;
+      
   
   }
     .clearfix { 
@@ -192,11 +210,10 @@ position: relative;
 
   .review__text {
     display: block;
-    padding: 0;
     font-size: 12px;
     line-height: 133%;
-    min-width: 100%;
-    margin: 0 auto;
+    width: 100%;
+  
   }
   .button-prev, 
   .button-next {
@@ -205,9 +222,9 @@ position: relative;
     top: 10%;
 }
 .button-prev {
-  left: 0;
+  left: 50px;
 }
 .button-next {
-  right: 0;
+  right: 50px;
 }
 }

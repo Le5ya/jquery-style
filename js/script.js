@@ -7,6 +7,25 @@ $('a[href*="#"]').on('click', function() {
   return false;
 });
 
+ymaps.ready(init);
+function init(){
+  const kantMap = new ymaps.Map("map", {
+      center: [55.724282057522785, 37.5634189101561],
+      zoom: 19
+  });
+
+  const mark = new ymaps.Placemark([55.72430018418378, 37.563451096625386], {}, {
+    iconLayout: 'default#image',
+    iconImageHref: 'img/pin1.svg',
+    iconImageSize: [50, 50],
+    iconImageOffset: [0, 30]
+  })
+
+  kantMap.geoObjects.add(mark);
+
+  kantMap.controls.remove('zoomControl');
+}
+
 
 const headerBtn = $('.header__button')
 const modalClose = $('.modal-order__close');
@@ -246,24 +265,7 @@ elem.on('click', function () {
 })
 
 
- ymaps.ready(init);
-    function init(){
-      const kantMap = new ymaps.Map("map", {
-          center: [55.724282057522785, 37.5634189101561],
-          zoom: 19
-      });
 
-      const mark = new ymaps.Placemark([55.72430018418378, 37.563451096625386], {}, {
-        iconLayout: 'default#image',
-        iconImageHref: 'img/pin1.svg',
-        iconImageSize: [50, 50],
-        iconImageOffset: [0, 30]
-      })
-
-      kantMap.geoObjects.add(mark);
-
-      kantMap.controls.remove('zoomControl');
- }
  
 // let map;
 // main();
@@ -289,26 +291,26 @@ elem.on('click', function () {
 // }
 
     
-const cookieAlert = document.querySelector('.alert-cookie');
-const cookieButton = document.querySelector('.alert-cookie__button');
+// const cookieAlert = document.querySelector('.alert-cookie');
+// const cookieButton = document.querySelector('.alert-cookie__button');
 
-cookieButton.addEventListener('click', () => {
-  cookieAlert.classList.remove('alert-cookie_no-ready');
-  Cookies.set('dom-ready-cookie', 'true', {
-    expires: 10,
-  }) 
-});
+// cookieButton.addEventListener('click', () => {
+//   cookieAlert.classList.remove('alert-cookie_no-ready');
+//   Cookies.set('dom-ready-cookie', 'true', {
+//     expires: 10,
+//   }) 
+// });
 
-if (!Cookies.get('dom-ready-cookie')) {
-  cookieAlert.classList.add('alert-cookie_no-ready');
-}
+// if (!Cookies.get('dom-ready-cookie')) {
+//   cookieAlert.classList.add('alert-cookie_no-ready');
+// }
 
 // swiper
 
 new Swiper('.swiper', {
   loop: true,
   slidesPerView: 1,
-  spaceBetween: 10,
+  spaceBetween: 20,
   breakpoints: {
     320: {
       spaceBetween: 5,

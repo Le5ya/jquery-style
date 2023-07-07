@@ -99,6 +99,9 @@ font-weight: bold;
   
 }
 @media (max-width: 530px) {
+  .acc__button {
+    padding: 40px 40px;
+  }
   .acc__button:after {
     right: 0;
     bottom: 0;
@@ -117,7 +120,7 @@ font-weight: bold;
     }
     .acc__title {
       display: inline-block;
-    max-width: 80%;
+      max-width: 78%;
     }
     .acc__item_color_purple {
       background-color: var(--white);
@@ -158,6 +161,11 @@ font-weight: bold;
     background-image: url("../img/close-purple.svg");
   }
 
+}
+@media (max-width: 450px) {
+  .acc__button {
+    padding: 20px 10px;
+  }
 }
 
 

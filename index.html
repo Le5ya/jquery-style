@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+<head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,9 +14,9 @@
   
   <script defer src="js/jquery-3.7.0.min.js"></script>
   <script defer src="js/jquery-ui.min.js"></script>
-  <script defer src="js/js.cookie.min.js"></script>
+  <!-- <script defer src="js/js.cookie.min.js"></script> -->
   <script defer src="js/inputmask.min.js"></script>
-  <script defer src="js/axios.min.js"></script>
+  <!-- <script defer src="js/axios.min.js"></script> -->
   <script defer src="js/just-validate.production.min.js"></script>
   <script defer src="js/script.js"></script>
   <title>GAME OVER</title>
@@ -144,10 +145,7 @@
   <section class="section book" id="book">
     <div class="container book__container">
       <h2 class="section__title">Забронировать зал просто</h2>
-      <form class="form book__form"  
-        id="book_up"
-        action="https://postman-echo.com/post"
-        method="POST">
+      <form class="form book__form"  id="book_up">
         <fieldset class="fieldset halls-fieldset">
           <legend class="fieldset__title">Выбери зал</legend>
           <!--<div class="halls__wrapper">-->
@@ -254,7 +252,7 @@
             </div>
         </fieldset>
         <div class="wrap">
-          <button class="button wrap__button">Забронировать</button>
+          <button type="submit" class="button wrap__button">Забронировать</button>
         </div>
       </form>
     </div>  
@@ -400,7 +398,9 @@
       
         </li>
         <li class="acc__item acc__item_color_purple">
-          <h3 class="acc__button">Как получить VIP-карту?</h3>
+          <h3 class="acc__button">
+            <span class="acc__title">Как получить VIP-карту?</span>
+          </h3>
           <div class="acc__wrapper">
             <p class="acc__text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, facilis. Quaerat nostrum possimus accusamus esse
@@ -411,7 +411,8 @@
         </li>
         <li class="acc__item question__item">
           <h3 class="acc__button">
-            Какая комната самая популярная?
+            <span class="acc__title">Какая комната самая популярная?</span>
+            
           </h3>
           <p class="acc__text">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos illo quasi et molestiae facilis? Alias sed
@@ -485,26 +486,25 @@
         </div>
       </div>
     </div>
-    </section>
+  </section>
    
-  <div class="alert-cookie">
+  <!-- <div class="alert-cookie">
     <p class="alert-cookie__text">Находясь на нашем сайте, вы соглашаетесь с политикой конфиденциальности</p>
     <button class="alert-cookie__button" type="button">Ясно, понятно</button>
-  </div>
+  </div> -->
   <div class="modal-order section">
     <div class="modal-order__wrapper">
       <button class="modal-order__close">
       </button>
       <h2 class="modal-order__title section__title">Заказать звонок</h2>
-      <form action="js/script.js" id="modal" class="modal-order__form"
-       method="post">
+      <form action="#" id="modal" class="modal-order__form">
         <label class="modal-order__label custom__item">Имя
           <input class="modal-order__input custom__input" type="text" name="name" required>
         </label>
         <label class="modal-order__label custom__item">Телефон
           <input class="custom__input modal-order__input modal-order__input_tel" type="tel" name="phone" required>
         </label>
-        <button class="modal-order__submit button wrap__button">Позвонить мне</button>
+        <button type="submit" class="modal-order__submit button wrap__button">Позвонить мне</button>
       </form>
     </div>
   </div>

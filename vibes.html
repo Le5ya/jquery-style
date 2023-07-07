@@ -1,28 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.css">
-	<title>Document</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="img/icon.svg">
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css"/>
+    <script defer src="js/swiper-bundle.min.js"></script>
+   
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=e656777d-aa7a-47c4-bf38-fc122f990847&lang=ru_RU"></script>
+    
+    <script defer src="js/jquery-3.7.0.min.js"></script>
+    <script defer src="js/jquery-ui.min.js"></script>
+    <script defer src="js/js.cookie.min.js"></script>
+    <script defer src="js/inputmask.min.js"></script>
+    <script defer src="js/axios.min.js"></script>
+    <script defer src="js/just-validate.production.min.js"></script>
+    <script defer src="js/page.js"></script>
+    <title>GAME OVER</title>
+  </head>
 
 <body>
   <header class="header page__header">
 		<div class="container header__container">
       <img src="img/logo-white.svg" alt="">
-			<ul class="menu">
+      <nav class="header__nav">
+			<ul class="menu menu_mobile">
 				<li class="menu__item"><a href="#halls">Залы</a></li>
 				<li class="menu__item"><a href="#about">О нас</a></li>
 				<li class="menu__item"><a href="#book">Бронь</a></li>
 				<li class="menu__item"><a href="#reviews">Отзывы</a></li>
 				<li class="menu__item"><a href="#contacts">Контакты</a></li>
 			</ul>
-      
+      </nav>
       <button class="hamb-line">
-        <img src="img/menu.svg" alt="menu">
       </button>
 			<button class="button header__button">Заказать звонок</button>
 		</div>
@@ -146,12 +160,28 @@
             </li>
           </ul>
 				</div>
-				<div class="map">
-					<img src="img/map.jpg" alt="" class="map__image">
-				</div>
+				<div class="map" id="map" style="width: 100%; height: 274px">
+          <!--<img src="img/map.jpg" alt="" class="map__image">-->
+        </div>
 			</div>
 		</div>
 	</section>
+  <div class="modal-order section">
+    <div class="modal-order__wrapper">
+      <button class="modal-order__close">
+      </button>
+      <h2 class="modal-order__title section__title">Заказать звонок</h2>
+      <form action="#" id="modal" class="modal-order__form">
+        <label class="modal-order__label custom__item">Имя
+          <input class="modal-order__input custom__input" type="text" name="name" required>
+        </label>
+        <label class="modal-order__label custom__item">Телефон
+          <input class="custom__input modal-order__input modal-order__input_tel" type="tel" name="phone" required>
+        </label>
+        <button type="submit" class="modal-order__submit button wrap__button">Позвонить мне</button>
+      </form>
+    </div>
+  </div>
 
 </body>
 

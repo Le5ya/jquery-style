@@ -97,10 +97,13 @@ input {
 @media (max-width: 904px) {
   .section {
     padding: 30px 0;
+   
   }
   .container {
     max-width: 728px;
     padding: 0 20px;
+   
+
   }
   .section__title {
     font-size: 24px;
@@ -108,9 +111,14 @@ input {
   }
 }
 @media (max-width: 450px) {
+  html {
+    width:100vw;
+    overflow-X:hidden;
+  }
   .section {
     width: 100%;
     padding: 15px 0;
+    
 
   }
    .container {
