@@ -2,6 +2,7 @@ html {
   box-sizing: border-box;
   position: relative;
   /* scroll-behavior: smooth; */
+  
 }
 * {
   box-sizing: inherit;
@@ -111,10 +112,7 @@ input {
   }
 }
 @media (max-width: 450px) {
-  html {
-    width:100vw;
-    overflow-X:hidden;
-  }
+  
   .section {
     width: 100%;
     padding: 15px 0;

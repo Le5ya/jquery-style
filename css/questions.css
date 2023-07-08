@@ -89,6 +89,10 @@ font-weight: bold;
     line-height: 16px;
     margin-bottom: 10px;
   }
+  .acc__text {
+    font-size: 12px;
+    line-height: 16px;
+  }
 
   .acc__button:after {
     right: 70px;
@@ -110,32 +114,31 @@ font-weight: bold;
     }
 }
 @media (max-width: 500px) {
-    .acc__button{
-      font-size: 12px;
-      line-height: 16px;
-      padding: 15px 12px;
-      width: 100%;
-      margin-bottom: 10px;
-      margin-right: 0;
-    }
-    .acc__title {
-      display: inline-block;
-      max-width: 78%;
-    }
-    .acc__item_color_purple {
-      background-color: var(--white);
-      color: var(--red-gray);
-    }
-    .acc__button:after {
-      width: 30px;
-      height: 30px;
-      
-      transform: translateY(-15%);
-      }
-      .acc__item_color_purple .acc__button:after {
-        background-image: url("../img/open-purple.svg");
-      }
-      .acc__item .acc__button:hover:after {
+  .acc__button{
+    font-size: 12px;
+    line-height: 16px;
+    padding: 15px 12px;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+  .acc__title {
+    display: inline-block;
+    max-width: 78%;
+  }
+  .acc__item_color_purple {
+    background-color: var(--white);
+    color: var(--red-gray);
+  }
+  .acc__button:after {
+    width: 30px;
+    height: 30px;   
+    transform: translateY(-15%);
+  }
+  .acc__item_color_purple .acc__button:after {
+    background-image: url("../img/open-purple.svg");
+  }
+  .acc__item .acc__button:hover:after {
     transition-duration: 0.5s;
     background-image: url("../img/open-purple_h.svg");
   }
@@ -145,12 +148,8 @@ font-weight: bold;
   }
 
   .acc__text {
-    font-size: 12px;
-      line-height: 16px;
       padding: 15px 5px;
       width: 100%;
-  
-
   }
   .acc__item .acc__button:after{
     background-image: url("../img/open1.svg");

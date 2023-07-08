@@ -228,16 +228,18 @@
   }
 }
 @media (max-width: 450px) {
-  .hero{
-    padding-bottom: 0;
+  .hero {
+    padding: 15px 0;
   }
+
   .hero__container {
   position: relative;
-  min-height: 220px; 
+  min-height: 180px; 
 }
   .hero__title {
     font-size: 35px;
     line-height: 100%;
+    margin-bottom: 8px;
   }
   .hero__subtitle {
     font-size: 10px;
@@ -250,7 +252,7 @@
   left: 140px;
   top: 25px;
   width: 200px;
-  height: 200px;
+  height: 179px;
 }
 .card__word {
   font-size: 22px;
@@ -273,7 +275,6 @@
     margin-right: 20px;
   }
   .hero__button {
-
     padding: 8px 13px;
     font-size: 10px;
     line-height: 12px;

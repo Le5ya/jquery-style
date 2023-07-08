@@ -2,7 +2,6 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    /* height: 639px; */
     left: 0;
     top: 107px;
     background: rgba(27, 26, 27, 0.7);
@@ -10,7 +9,7 @@
   }
   .modal-order__wrapper {
     position: absolute;
-    width: 87%;
+    width: 78%;
     height: 498px;
     padding-top: 60px;
     padding-bottom: 80px;
@@ -65,8 +64,7 @@
     height: 100%;
   }
   .modal-order__wrapper {
-    width: 100%;;
-    height: 498px;
+    width: 87%;
     padding-top: 60px;
     padding-bottom: 88px;
     top: 20px;

@@ -1,6 +1,5 @@
 .header {
-  padding: 38px 0;
-  
+  padding: 38px 0; 
 }
 .header__container {
   display: flex;
@@ -145,7 +144,13 @@
 
 @media(max-width: 450px) {
   .header {
-    width: 100%
+    width: 100%;
+    height: 42px;
+    padding: 20px 0; 
+  }
+  .header__logo {
+    width: 66px;
+    height: 42px;
   }
  
   .header__button {
@@ -160,6 +165,10 @@
     position: static;
     opacity: 1;
     
+   }
+   .hamb-line {
+    width: 39px;
+    height: 20px;
    }
   
  

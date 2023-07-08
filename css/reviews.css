@@ -75,10 +75,10 @@ margin-left: -20px;
 }
 
 .button-prev {
-  left: -10px;
+  left: 0;
 }
 .button-next {
-  right: -20px;
+  right: 0;
 }
 @media (max-width: 1040px) {
   .review {
@@ -129,6 +129,7 @@ margin-left: -20px;
     top: 25%;
  
   }
+
   
 }
 @media (max-width: 904px) {
@@ -161,12 +162,7 @@ margin-left: -20px;
     top: 25%;
  
   }
-  .button-prev {
-    left: 0;
-  }
-  .button-next {
-    right: 0;
-  }
+  
   
 }
 @media (max-width: 450px) {
