@@ -58,7 +58,7 @@
   width: 27px;
   height: 27px;
   border-radius: 50%;
-  background: var(--white);
+ 
 }
 
 .subfieldset__checkbox {
@@ -76,7 +76,7 @@
   width: 25px;
   height: 25px;
   border: 1px solid var(--light-purple);
-  background-color: var(--white);
+  
 }
 
 .halls-fieldset__label {
