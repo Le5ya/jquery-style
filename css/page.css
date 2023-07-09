@@ -122,7 +122,11 @@
 		.back {
       font-size: 16px;
       line-height: 175%;
-} 
+    }
+    .back:before {
+      top: 5px;
+    }
+
 
 
     .page__section {
@@ -180,6 +184,9 @@
 	}
 	
 	@media(max-width: 450px) {
+    .page__header {
+      margin-bottom: 20px;
+    }
     .page__section {
       padding: 15px 0;
     }
@@ -230,6 +237,18 @@
     .rooms__list {
       grid-template-columns: 1fr;
       width: 100%;
+    }
+    .back {
+      padding-left: 20px;
+      font-size: 12px;
+      line-height: 16px;
+    } 
+    
+    .back:before {
+      background-image: url('../img/back-1.svg');
+      width: 16px;
+      
+    
     }
 
 
