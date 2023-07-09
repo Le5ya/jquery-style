@@ -10,7 +10,7 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 46px;
-  padding: 0;
+  /* padding: 0; */
   margin-bottom: 20px;
 }
 .acc__button {
@@ -113,7 +113,7 @@ font-weight: bold;
     padding: 15px 12px;
     width: 100%;
     margin-bottom: 10px;
-    margin-right: 0;
+  
   }
   .acc__title {
     display: inline-block;

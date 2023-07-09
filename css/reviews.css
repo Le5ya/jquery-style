@@ -1,11 +1,11 @@
-.review:not(:last-child) {
-  display: block;
-  margin-bottom: 50px;
+.reviews {
+  overflow-x: hidden;
 }
 .review__wrapper {
   position: relative;
   min-height: 350px;
   padding: 0 100px;
+  
 }
 .review__person {
   position: relative;
@@ -13,6 +13,7 @@
   min-height: 300px;
   margin-right: 20px;
   float: left;
+  overflow-x: hidden;
   
 }
 .review__img {
@@ -129,7 +130,9 @@ margin-left: -20px;
     top: 25%;
  
   }
-
+  .button-next {
+    right: 100px;
+  }
   
 }
 @media (max-width: 904px) {
@@ -162,6 +165,7 @@ margin-left: -20px;
     top: 25%;
  
   }
+  
   
 }
 @media (max-width: 450px) {
