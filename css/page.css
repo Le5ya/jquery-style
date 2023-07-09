@@ -18,7 +18,7 @@
   background-image: url('../img/back.svg');
   background-repeat: no-repeat;
   left: 0;
-  top: 25%;
+  top: 0;
   width: 31px;
   height: 16px;
 	color: var(--white);

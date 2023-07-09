@@ -9,8 +9,8 @@
   }
   .modal-order__wrapper {
     position: absolute;
-    width: 78%;
-    height: 498px;
+    width: 60%;
+    height: 598px;
     padding-top: 60px;
     padding-bottom: 80px;
     left:50%;
@@ -57,6 +57,14 @@
     border-radius: 10px;
     box-shadow: 0 0 10px var(--white);
   }
+  @media (max-width: 904px ) {
+    .modal-order__wrapper {
+     width: 78%;
+     height: 498px; 
+    }
+    
+  }
+ 
 
 @media (max-width: 350px ) {
   .modal-order {
