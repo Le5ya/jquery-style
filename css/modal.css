@@ -52,7 +52,6 @@
   .modal-order__submit {
     max-width: 300px;
     height: 60px;
-    margin: 0 auto;
     background: #FFFFFF;
     border-radius: 10px;
     box-shadow: 0 0 10px var(--white);
