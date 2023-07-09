@@ -51,16 +51,23 @@
   .modal-order__input {
     width: 547px;
   }
-  .wrap__button {
+  .modal-order__submit {
     display: block;
     width: 100%;
     height: 60px;
     background: #FFFFFF;
     border-radius: 10px;
     box-shadow: 0 0 10px var(--white);
+    color: #6C0287;
+    font-family: Arial;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    text-transform: uppercase;
   }
   @media (max-width: 1040px ) {
-    .wrap__button {
+    .modal-order__submit {
       max-width: 547px;
     }
   }
@@ -120,7 +127,7 @@
 
   }
 
-  .wrap__button  {
+  .modal-order__submit  {
     width: 243px;
     height: 52px;
     
