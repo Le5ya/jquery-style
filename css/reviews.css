@@ -60,13 +60,13 @@
 }
 .slider-container {
 position: relative;
-margin-left: -20px;
+
 }
 .button-prev,
 .button-next {
   position: absolute;
-  width: 46px;
-  height: 46px;
+  width: 60px;
+  height: 60px;
   top: calc(40% - 23px);
   z-index: 10;
   cursor: pointer;
@@ -75,11 +75,16 @@ margin-left: -20px;
   justify-content: center;
 }
 
+
 .button-prev {
-  left: 10px;
+  left: 0;
 }
 .button-next {
-  right: 10px;
+  right: 0;
+}
+.button__img {
+  max-height: 100%;
+  max-width: 100%;
 }
 @media (max-width: 1040px) {
   .review {
@@ -125,14 +130,13 @@ margin-left: -20px;
   }
   .button-prev, 
   .button-next {
-    width: 36px;
-    height: 36px;
+    width: 50px;
+    height: 50px;
     top: 25%;
- 
   }
-  .button-next {
+  /* .button-next {
     right: 50px;
-  }
+  } */
   
 }
 @media (max-width: 904px) {
@@ -160,11 +164,7 @@ margin-left: -20px;
     line-height: 22px;
     max-width: 550px;
   }
-  .button-prev, 
-  .button-next {
-    top: 25%;
- 
-  }
+  
   .button-next {
     right: 25px;
   }
